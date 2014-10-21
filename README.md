@@ -3,9 +3,6 @@ btcturk-client
 
 python client for <a href="https://www.btcturk.com/yardim/api-home-page">btcturk api</a>.
 
-
-![screenshot](http://i.imgur.com/VZhi5au.png)
-
 ### installation
 
 ```bash
