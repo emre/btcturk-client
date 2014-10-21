@@ -28,7 +28,7 @@ all methods including buy/sell are mapped to current API.
 ```python
 from btcturk_client.client import Btcturk
 
-print _btcturk.balance()
+print _btcturk.ticker()
 ```
 
 **response**
