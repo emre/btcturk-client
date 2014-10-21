@@ -19,10 +19,6 @@ _btcturk = Btcturk("publicKey", "privateKey")
 # if you don't plan to call authenticated api methods.
 ```
 
-you can get your private/public key peer from your account at <a href="http://btcturk.com">BTCTurk</a>.
-
-all methods including buy/sell are mapped to current API.
-
 **example call: ticker()**
 
 ```python
@@ -47,3 +43,9 @@ print _btcturk.ticker()
 ```
 
 check out source for other methods.
+
+**notes**
+
+ - you can get your private/public key peer from your account at <a href="http://btcturk.com">BTCTurk</a>.
+
+ - all methods including buy/sell are mapped to current API.
