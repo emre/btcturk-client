@@ -140,7 +140,7 @@ class Btcturk(object):
         return response
 
     def sell(self, market_order=True, price=None, amount=None, total=None):
-        print market_order, price, amount, total
+
         if market_order:
             data = {"IsMarketOrder": 1, "Total": total}
         else:
