@@ -142,7 +142,7 @@ class Btcturk(object):
     def sell(self, market_order=True, price=None, amount=None, total=None):
 
         if market_order:
-            data = {"IsMarketOrder": 1, "Total": total}
+            data = {"IsMarketOrder": 1, "Amount": amount}
         else:
             data = {"IsMarketOrder": 0, "Price": price, "Amount": amount}
 
@@ -161,11 +161,11 @@ class Btcturk(object):
 
     @authenticated_method
     def buy_with_limit_order(self, price, amount):
-        return self.buy(market_order=True, price=price, amount=amount)
+        return self.buy(market_order=False, price=price, amount=amount)
 
     @authenticated_method
-    def sell_with_market_order(self, total):
-        return self.sell(market_order=True, total=total)
+    def sell_with_market_order(self, amount):
+        return self.sell(market_order=True, amount=amount)
 
     @authenticated_method
     def sell_with_limit_order(self, price, amount):
