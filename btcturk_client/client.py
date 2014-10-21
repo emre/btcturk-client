@@ -62,20 +62,20 @@ class Btcturk(object):
         return headers
 
     def ticker(self):
-        response = requests.get(self._generate_url("ticker"))
+        response = requests.get(self._generate_url("ticker"), verify=False)
 
         return response.json()
 
     def trades(self, since_id=None):
         if since_id:
-            response = requests.get(self._generate_url("trades", {"sinceid": since_id}))
+            response = requests.get(self._generate_url("trades", {"sinceid": since_id}), verify=False)
         else:
-            response = requests.get(self._generate_url("trades"))
+            response = requests.get(self._generate_url("trades"), verify=False)
 
         return response.json()
 
     def orderbook(self):
-        response = requests.get(self._generate_url("orderbook"))
+        response = requests.get(self._generate_url("orderbook"), verify=False)
 
         return response.json()
 
