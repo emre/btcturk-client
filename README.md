@@ -24,6 +24,8 @@ _btcturk = Btcturk("publicKey", "privateKey")
 ```python
 from btcturk_client.client import Btcturk
 
+_btcturk = Btcturk()
+
 print _btcturk.ticker()
 ```
 
