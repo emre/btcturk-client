@@ -94,9 +94,8 @@ class Btcturk(object):
         # this method doesn't work atm.
         # btcturk responses with "{u'Message': u'An error has occurred.'})"
 
-        response = requests.post(
-            self._generate_url("userTransactions"),
-            data={"offset": offset, "limit": limit, "sort": sort},
+        response = requests.get(
+            self._generate_url("userTransactions", {"offset": offset, "limit": limit, "sort": sort}),
             headers=self._get_auth_headers(),
             verify=False,
         )
